@@ -2,8 +2,9 @@ body {
   background-color: rgb(19, 21, 24);
 }
 
-p, a {
-  font-family: 'Courier New', Courier, monospace;
+p,
+a {
+  font-family: "Courier New", Courier, monospace;
   font-size: 18px;
   font-weight: 600;
   color: aliceblue;
@@ -18,7 +19,7 @@ p, a {
 }
 
 .title {
-  font-family: monospace, 'Courier New', Courier;
+  font-family: monospace, "Courier New", Courier;
   font-size: x-large;
   font-weight: bolder;
 }
@@ -45,11 +46,11 @@ button {
 }
 
 .level-btn:hover {
-  background-color: rgba(240, 248, 255, 0.875)
+  background-color: rgba(240, 248, 255, 0.875);
 }
 
 .level-btn:active {
-  background-color: rgba(240, 248, 255, 0.8)
+  background-color: rgba(240, 248, 255, 0.8);
 }
 
 .hirigana-image {
@@ -57,4 +58,34 @@ button {
   padding: 32px;
   border-radius: 50%;
   margin: 22px;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.level-select,
+#gen-hrgna-box {
+  text-align: center;
+}
+
+.level-btn {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hiragana-answer-input {
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#gen-hrgna-btn,
+#rtrn-to-lvl-slct-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hiragana Notecards</title>
-  <link href="styles/hiragana-generator.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-  <div id="lvl-slct-box" class="level-select">
-
-    <p class="title">Level Select</p>
-    <p id="lvl-indctr" class="level-indicator">Level 1</p>
-    <button id="lvl-slct-1" class="level-btn">
-      <img src="images/number_kanji/1ichi.png" alt="Level One" class="level-img">
-    </button>
-    <button id="lvl-slct-2" class="level-btn">
-      <img src="images/number_kanji/2ni.png" alt="Level Two" class="level-img">
-    </button>
-    <button id="lvl-slct-3" class="level-btn">
-      <img src="images/number_kanji/3san.png" alt="Level Three" class="level-img">
-    </button>
-    <button id="lvl-slct-4" class="level-btn">
-      <img src="images/number_kanji/4yon.png" alt="Level Four" class="level-img">
-    </button>
-    <button id="lvl-slct-5" class="level-btn">
-      <img src="images/number_kanji/5go.png" alt="Level Five" class="level-img">
-    </button>
-
-  </div>
-
-  <div id="gen-hrgna-box">
-    <div id="gen-hrgna-img-box"></div>
-    <button id="gen-hrgna-btn">
-      Generate
-    </button>
-  </div>
-
-  <div id="rtrn-to-lvl-slct">
-    <button id="rtrn-to-lvl-slct-btn">Return to Level Select</button>
-  </div>
-
-  <a href=menu.html>Back to main menu</a>
-
-  <script src="scripts/general.js"></script>
-  <script src="scripts/hirigana-randomizer.js"></script>
-  <script src="scripts/answer-input-response.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiragana Notecards</title>
+    <link
+      href="styles/hiragana-generator.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div id="lvl-slct-box" class="level-select">
+        <p class="title">Level Select</p>
+        <p id="lvl-indctr" class="level-indicator">Level 1</p>
+        <button id="lvl-slct-1" class="level-btn" data-level="1">
+          <img
+            src="images/number_kanji/1ichi.png"
+            alt="Level One"
+            class="level-img"
+          />
+        </button>
+        <button id="lvl-slct-2" class="level-btn" data-level="2">
+          <img
+            src="images/number_kanji/2ni.png"
+            alt="Level Two"
+            class="level-img"
+          />
+        </button>
+        <button id="lvl-slct-3" class="level-btn" data-level="3">
+          <img
+            src="images/number_kanji/3san.png"
+            alt="Level Three"
+            class="level-img"
+          />
+        </button>
+        <button id="lvl-slct-4" class="level-btn" data-level="4">
+          <img
+            src="images/number_kanji/4yon.png"
+            alt="Level Four"
+            class="level-img"
+          />
+        </button>
+        <button id="lvl-slct-5" class="level-btn" data-level="5">
+          <img
+            src="images/number_kanji/5go.png"
+            alt="Level Five"
+            class="level-img"
+          />
+        </button>
+      </div>
+      <div id="gen-hrgna-box">
+        <div id="gen-hrgna-img-box"></div>
+        <input
+          id="hrgnaAnswrInput"
+          class="hiragana-answer-input"
+          placeholder="Answer"
+          style="display: none"
+        />
+        <button id="gen-hrgna-btn">Generate</button>
+        <button id="rtrn-to-lvl-slct-btn" style="display: none">
+          Return to Level Select
+        </button>
+      </div>
+    </div>
+    <a href="menu.html">Back to main menu</a>
+    <script src="scripts/hiragana-app.js"></script>
+  </body>
 </html>
