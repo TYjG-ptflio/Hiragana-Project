@@ -1,5 +1,8 @@
+let userHrgnaInput = app.userHrgnaInput;
 
+const inputHandler = {
 
+};
 
 
 /*

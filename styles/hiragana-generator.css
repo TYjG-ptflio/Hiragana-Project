@@ -28,7 +28,7 @@ a {
   display: block;
 }
 
-.hiragana-answer-input {
+.hrgna-ans-inpt {
   display: block;
   width: 128px;
 }
@@ -37,7 +37,7 @@ button {
   margin: 16px 6px;
 }
 
-.level-btn {
+.lvl-btn {
   border: 0px solid;
   border-radius: 50%;
   background-color: aliceblue;
@@ -45,11 +45,11 @@ button {
   cursor: pointer;
 }
 
-.level-btn:hover {
+.lvl-btn:hover {
   background-color: rgba(240, 248, 255, 0.875);
 }
 
-.level-btn:active {
+.lvl-btn:active {
   background-color: rgba(240, 248, 255, 0.8);
 }
 
@@ -66,24 +66,25 @@ button {
   padding: 20px;
 }
 
-.level-select,
-#gen-hrgna-box {
+.lvl-slct-box,
+#generate-hiragana-box {
   text-align: center;
 }
 
-.level-btn {
+.lvl-btn {
   margin: 5px;
   cursor: pointer;
 }
 
-.hiragana-answer-input {
+.hrgna-ans-inpt {
   margin-top: 20px;
   padding: 5px;
   font-size: 16px;
 }
 
-#gen-hrgna-btn,
-#rtrn-to-lvl-slct-btn {
+#generate-hiragana-button,
+#return-to-level-select-button,
+#input-answer-button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;

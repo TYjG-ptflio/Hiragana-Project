@@ -1,6 +1,7 @@
 let hrgnaLevel = 1;
 let hrgnaSoundCtgry = "";
 let hrgnaSound = "";
+let score = 0;
 
 const app = {
   // Cache DOM elements
@@ -12,20 +13,23 @@ const app = {
 
   // Store DOM elements in variables
   cacheDom() {
-    this.lvlSelectBox = document.getElementById("lvl-slct-box");
-    this.genHrgnaBox = document.getElementById("gen-hrgna-box");
-    this.genHrgnaImgBox = document.getElementById("gen-hrgna-img-box");
-    this.lvlIndicator = document.getElementById("lvl-indctr");
-    this.genHiraganaBtn = document.getElementById("gen-hrgna-btn");
-    this.rtrnToLvlSlctBtn = document.getElementById("rtrn-to-lvl-slct-btn");
-    this.hrgnaAnswrInput = document.getElementById("hrgnaAnswrInput");
-    this.levelBtns = document.querySelectorAll(".level-btn");
+    this.levelSelectBox = document.getElementById("level-select-box");
+    this.generateHiraganaBox = document.getElementById("generate-hiragana-box");
+    this.generateHiraganaImageBox = document.getElementById("generate-hiragana-image-box");
+    this.levelIndicator = document.getElementById("level-indicator");
+    this.generateHiraganaButton = document.getElementById("generate-hiragana-button");
+    this.returnToLevelSelectButton = document.getElementById("return-to-level-select-button");
+    this.hiraganaAnswerInput = document.getElementById("hiragana-answer-input");
+    this.levelButtons = document.querySelectorAll(".lvl-btn");
+
+    this.input = document.getElementById("level-select-box");
+    this.inputAnswerButton = document.getElementById("input-answer-button");
   },
 
   // Bind event listeners to DOM elements
   bindEvents() {
     // Loop through each level button and add a click event listener
-    this.levelBtns.forEach((btn) =>
+    this.levelButtons.forEach((btn) =>
       btn.addEventListener("click", (e) => {
         // Get the level from the button's data-level attribute (IF it exists)
         const level = e.currentTarget.dataset.level;
@@ -33,12 +37,16 @@ const app = {
       })
     );
     // Add click listeners to the generate hiragana button
-    this.genHiraganaBtn.addEventListener("click", () =>
+    this.generateHiraganaButton.addEventListener("click", () =>
       this.generateHiragana()
     );
     // Add click listeners to the return to level select button
-    this.rtrnToLvlSlctBtn.addEventListener("click", () =>
+    this.returnToLevelSelectButton.addEventListener("click", () =>
       this.returnToLevelSelect()
+    );
+    // Add click listeners to the input answer button
+    this.inputAnswerButton.addEventListener("click", () =>
+      this.generateHiragana()
     );
   },
 
@@ -58,18 +66,19 @@ const app = {
     // debug via console output
     console.log("Level: ", hrgnaLevel);
 
-    this.lvlIndicator.innerText = `Level ${hrgnaLevel}`;
+    this.levelIndicator.innerText = `Level ${hrgnaLevel}`;
   },
 
   // Generate a hiragana character
   generateHiragana() {
     // Hide the level select box and generate hiragana button
-    this.lvlSelectBox.style.display = "none";
-    this.genHiraganaBtn.style.display = "none";
+    this.levelSelectBox.style.display = "none";
+    this.generateHiraganaButton.style.display = "none";
 
     // Display the return to level select button and hiragana answer input
-    this.rtrnToLvlSlctBtn.style.display = "block";
-    this.hrgnaAnswrInput.style.display = "block";
+    this.returnToLevelSelectButton.style.display = "block";
+    this.hiraganaAnswerInput.style.display = "block";
+    this.inputAnswerButton.style.display = "block";
 
     // Randomize the hiragana sound category and select a sound from that category
     this.randomizeHiraganaSoundCategory();
@@ -84,23 +93,28 @@ const app = {
     hrgnaImg.setAttribute("id", "hrgna-img");
 
     // Append the hiragana image to the hiragana image box
-    this.genHrgnaImgBox.innerHTML = "";
-    this.genHrgnaImgBox.appendChild(hrgnaImg);
+    this.generateHiraganaImageBox.innerHTML = "";
+    this.generateHiraganaImageBox.appendChild(hrgnaImg);
   },
 
   // Return to the level select screen
   returnToLevelSelect() {
     // Display the level select box and generate hiragana button
-    this.lvlSelectBox.style.display = "block";
-    this.genHiraganaBtn.style.display = "block";
+    this.levelSelectBox.style.display = "block";
+    this.generateHiraganaButton.style.display = "block";
 
     // Hide the return to level select button and hiragana answer input
-    this.rtrnToLvlSlctBtn.style.display = "none";
-    this.hrgnaAnswrInput.style.display = "none";
+    this.returnToLevelSelectButton.style.display = "none";
+    this.hiraganaAnswerInput.style.display = "none";
+    this.inputAnswerButton.style.display = "none";
 
     // Reset the hiragana image and answer input
-    this.genHrgnaImgBox.innerHTML = "";
-    this.hrgnaAnswrInput.value = "";
+    this.generateHiraganaImageBox.innerHTML = "";
+    this.hiraganaAnswerInput.value = "";
+  },
+
+  checkAnswer() {
+    if
   },
 
   // Randomize the hiragana sound category

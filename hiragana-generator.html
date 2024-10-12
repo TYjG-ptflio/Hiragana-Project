@@ -12,55 +12,56 @@
   </head>
   <body>
     <div id="app">
-      <div id="lvl-slct-box" class="level-select">
+      <div id="level-select-box" class="lvl-slct-box">
         <p class="title">Level Select</p>
-        <p id="lvl-indctr" class="level-indicator">Level 1</p>
-        <button id="lvl-slct-1" class="level-btn" data-level="1">
+        <p id="level-indicator" class="lvl-indctr">Level 1</p>
+        <button id="level-select-1" class="lvl-btn" data-level="1">
           <img
             src="images/number_kanji/1ichi.png"
             alt="Level One"
-            class="level-img"
+            class="lvl-img"
           />
         </button>
-        <button id="lvl-slct-2" class="level-btn" data-level="2">
+        <button id="level-select-2" class="lvl-btn" data-level="2">
           <img
             src="images/number_kanji/2ni.png"
             alt="Level Two"
-            class="level-img"
+            class="lvl-img"
           />
         </button>
-        <button id="lvl-slct-3" class="level-btn" data-level="3">
+        <button id="level-select-3" class="lvl-btn" data-level="3">
           <img
             src="images/number_kanji/3san.png"
             alt="Level Three"
-            class="level-img"
+            class="lvl-img"
           />
         </button>
-        <button id="lvl-slct-4" class="level-btn" data-level="4">
+        <button id="level-select-4" class="lvl-btn" data-level="4">
           <img
             src="images/number_kanji/4yon.png"
             alt="Level Four"
-            class="level-img"
+            class="lvl-img"
           />
         </button>
-        <button id="lvl-slct-5" class="level-btn" data-level="5">
+        <button id="level-select-5" class="lvl-btn" data-level="5">
           <img
             src="images/number_kanji/5go.png"
             alt="Level Five"
-            class="level-img"
+            class="lvl-img"
           />
         </button>
       </div>
-      <div id="gen-hrgna-box">
-        <div id="gen-hrgna-img-box"></div>
+      <div id="generate-hiragana-box">
+        <div id="generate-hiragana-image-box"></div>
         <input
-          id="hrgnaAnswrInput"
-          class="hiragana-answer-input"
+          id="hiragana-answer-input"
+          class="hrgna-ans-inpt"
           placeholder="Answer"
           style="display: none"
         />
-        <button id="gen-hrgna-btn">Generate</button>
-        <button id="rtrn-to-lvl-slct-btn" style="display: none">
+        <button id="input-answer-button" class="inpt-ans-btn" style="display: none">Confirm</button>
+        <button id="generate-hiragana-button">Generate</button>
+        <button id="return-to-level-select-button" style="display: none">
           Return to Level Select
         </button>
       </div>
